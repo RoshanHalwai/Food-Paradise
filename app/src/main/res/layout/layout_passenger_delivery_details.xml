@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/passengerDeliveryDetailsLine"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:id="@+id/layoutPassengerDeliveryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightAccent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textPassengerDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passenger Details"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textPassengerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roshan Halwai"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textPassengerMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8667225939"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textDeliveryInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delivery Information"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textStationDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CBE - 3:27 PM, Mar 28"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textTrainDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="22648 - S7, 25"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

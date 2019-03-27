@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DetailsConfirmationActivity">
+
+    <include
+        android:id="@+id/layoutBase"
+        layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutBase"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textPassengerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="20dp"
+            android:text="@string/passenger_name"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editPassengerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/primary_color_box"
+            android:hint="@string/enter_passenger_name"
+            android:inputType="textCapWords|textVisiblePassword"
+            android:padding="15dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="20dp"
+            android:text="@string/mobile_number"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/primary_color_box"
+            android:hint="@string/enter_mobile_number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="15dp"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textCoachNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/coach"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editCoachNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_black_color_box"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textSeatNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/seat_number"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editSeatNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_black_color_box"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectedItemsFooterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textPersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:text="@string/enter_your_personal_info"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonSaveAndContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:padding="20dp"
+            android:text="@string/save_amp_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
