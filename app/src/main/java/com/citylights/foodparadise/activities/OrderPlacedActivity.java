@@ -13,6 +13,7 @@ import com.citylights.foodparadise.R;
 import com.citylights.foodparadise.adapters.OrderedFoodItemsAdapter;
 import com.citylights.foodparadise.pojos.ItemDetails;
 import com.citylights.foodparadise.pojos.OrderDetails;
+import com.citylights.foodparadise.pojos.VendorDetails;
 
 import java.text.DecimalFormat;
 
@@ -158,8 +159,22 @@ public class OrderPlacedActivity extends BaseActivity implements View.OnClickLis
             textVendorName.setText(vendorDetails.getVendorName());
             int vendorLogoDrawable = VENDORS_LOGO_MAP.get(vendorDetails.getVendorId());
             imageVendorLogo.setImageDrawable(getResources().getDrawable(vendorLogoDrawable));
-            updated.onCallback(true, false);
+            updateDeliveryDetailsSection(vendorDetails, (result, isNull1) -> updated.onCallback(true, false));
         });
+    }
+
+    private void updateDeliveryDetailsSection(VendorDetails vendorDetails, IFirebaseCallbacks.Callback<Boolean> updated) {
+        TextView textVendorDeliveryDetails = findViewById(R.id.textVendorDeliveryDetails);
+        TextView textDeliveryBoyName = findViewById(R.id.textDeliveryBoyName);
+        TextView textDeliveryBoyMobileNumber = findViewById(R.id.textDeliveryBoyMobileNumber);
+
+        textVendorDeliveryDetails.setTypeface(setLatoRegularFont(this));
+        textDeliveryBoyName.setTypeface(setLatoRegularFont(this));
+        textDeliveryBoyMobileNumber.setTypeface(setLatoRegularFont(this));
+
+        textDeliveryBoyName.setText(vendorDetails.getDeliveryBoyName());
+        textDeliveryBoyMobileNumber.setText(vendorDetails.getDeliveryBoyNumber());
+        updated.onCallback(true, false);
     }
 
     private void updateOrderedItemsView(IFirebaseCallbacks.Callback<Boolean> updated) {

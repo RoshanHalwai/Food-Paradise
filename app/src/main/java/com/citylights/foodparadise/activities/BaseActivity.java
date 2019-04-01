@@ -14,7 +14,7 @@ import static com.citylights.foodparadise.Constants.setLatoBoldFont;
 
  * Created by Roshan Halwai on 3/22/2019
  */
-public abstract class BaseActivity<T> extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     /* ------------------------------------------------------------- *
      * Abstract Methods

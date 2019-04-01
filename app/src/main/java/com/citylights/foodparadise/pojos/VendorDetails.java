@@ -9,12 +9,22 @@ import java.util.Map;
  */
 public class VendorDetails implements Serializable {
 
+    private String deliveryBoyName;
+    private String deliveryBoyNumber;
     private String vendorId;
     private String vendorName;
     private String minimumOrderAmount;
     private Map<String, Object> menu;
 
     public VendorDetails() {
+    }
+
+    public String getDeliveryBoyName() {
+        return deliveryBoyName;
+    }
+
+    public String getDeliveryBoyNumber() {
+        return deliveryBoyNumber;
     }
 
     public String getVendorId() {
